@@ -14,21 +14,19 @@ const About = (props:any) => {
       <div>ABOUT PAGE</div>
       <Link href="/">Back</Link>
       <div>
-        <button onClick={()=>setID("1")}>1</button>
+        <Link href="/task/1" onClick={()=>setID("1")}>1</Link>
       </div>
       <div>
-        <button onClick={()=>setID("2")}>2</button>
+        <Link href="/task/2" onClick={()=>setID("2")}>2</Link>
       </div>
       <div>
-        <button onClick={()=>setID("3")}>3</button>
+        <Link href="/task/3" onClick={()=>setID("3")}>3</Link>
       </div>
       <div>
-        <button onClick={()=>setID("4")}>4</button>
+        <Link href="/task/4" onClick={()=>setID("4")}>4</Link>
       </div>
-      <div>
-        <button onClick={()=>setID("5")}>5</button>
-      </div>
-      {ID && <div>{JSON.stringify(post)}</div>}
+
+      {/*{ID && <div>{JSON.stringify(post)}</div>}*/}
     </>
   );
 };
