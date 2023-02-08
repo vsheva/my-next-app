@@ -1,33 +1,40 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import { MainLayout } from '../components/MainLayout';
 
-const About = (props:any) => {
-  const[ID, setID] = useState("1");
-  const[post, setPost] = useState("");
+const About = (props: any) => {
+  const [ID, setID] = useState('1');
+  const [post, setPost] = useState('');
 
-  useEffect(() =>{
-    setPost(props.message.filter((post:any)=> post.id===ID))
-  }, [props.message, ID])
+  useEffect(() => {
+    setPost(props.message.filter((post: any) => post.id === ID));
+  }, [props.message, ID]);
 
   return (
-    <>
+    <MainLayout title="about">
       <div>ABOUT PAGE</div>
       <Link href="/">Back</Link>
       <div>
-        <Link href="/task/1" onClick={()=>setID("1")}>1</Link>
+        <Link href="/task/1" onClick={() => setID('1')}>
+          1
+        </Link>
       </div>
       <div>
-        <Link href="/task/2" onClick={()=>setID("2")}>2</Link>
+        <Link href="/task/2" onClick={() => setID('2')}>
+          2
+        </Link>
       </div>
       <div>
-        <Link href="/task/3" onClick={()=>setID("3")}>3</Link>
+        <Link href="/task/3" onClick={() => setID('3')}>
+          3
+        </Link>
       </div>
       <div>
-        <Link href="/task/4" onClick={()=>setID("4")}>4</Link>
+        <Link href="/task/4" onClick={() => setID('4')}>
+          4
+        </Link>
       </div>
-
-      {/*{ID && <div>{JSON.stringify(post)}</div>}*/}
-    </>
+    </MainLayout>
   );
 };
 
@@ -41,7 +48,6 @@ export async function getServerSideProps() {
     props: { message: data },
   };
 }
-
 
 /*
  await fetch('https://62e7897793938a545bd3a4cc.mockapi.io/api/v1/tasks')
