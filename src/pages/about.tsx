@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { MainLayout } from '../components/MainLayout';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const About = (props: any) => {
   const [ID, setID] = useState('1');
@@ -12,28 +15,33 @@ const About = (props: any) => {
 
   return (
     <MainLayout title="about">
-      <div>ABOUT PAGE</div>
-      <Link href="/">Back</Link>
-      <div>
-        <Link href="/task/1" onClick={() => setID('1')}>
-          1
-        </Link>
-      </div>
-      <div>
-        <Link href="/task/2" onClick={() => setID('2')}>
-          2
-        </Link>
-      </div>
-      <div>
-        <Link href="/task/3" onClick={() => setID('3')}>
-          3
-        </Link>
-      </div>
-      <div>
-        <Link href="/task/4" onClick={() => setID('4')}>
-          4
-        </Link>
-      </div>
+      <AppBar component="nav">
+        <Box sx={{ display: 'flex' }}>
+          <Typography>Next</Typography>
+          <h1>ABOUT PAGE</h1>
+          <Link href="/">Back</Link>
+          <div>
+            <Link href="/task/1" onClick={() => setID('1')}>
+              1
+            </Link>
+          </div>
+          <div>
+            <Link href="/task/2" onClick={() => setID('2')}>
+              2
+            </Link>
+          </div>
+          <div>
+            <Link href="/task/3" onClick={() => setID('3')}>
+              3
+            </Link>
+          </div>
+          <div>
+            <Link href="/task/4" onClick={() => setID('4')}>
+              4
+            </Link>
+          </div>
+        </Box>
+      </AppBar>
     </MainLayout>
   );
 };
