@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { MainLayout } from '../components/MainLayout';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { MainLayout } from '../components/MainLayout';
 
 const About = (props: any) => {
   const [ID, setID] = useState('1');
@@ -15,33 +15,65 @@ const About = (props: any) => {
 
   return (
     <MainLayout title="about">
-      <AppBar component="nav">
-        <Box sx={{ display: 'flex' }}>
-          <Typography>Next</Typography>
-          <h1>ABOUT PAGE</h1>
-          <Link href="/">Back</Link>
-          <div>
-            <Link href="/task/1" onClick={() => setID('1')}>
-              1
-            </Link>
-          </div>
-          <div>
-            <Link href="/task/2" onClick={() => setID('2')}>
-              2
-            </Link>
-          </div>
-          <div>
-            <Link href="/task/3" onClick={() => setID('3')}>
-              3
-            </Link>
-          </div>
-          <div>
-            <Link href="/task/4" onClick={() => setID('4')}>
-              4
-            </Link>
-          </div>
+      <Box
+        sx={{
+          display: 'flex',
+          pr: '20px',
+        }}
+      >
+        <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+          <h1>ABOUT</h1>
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            pr: '20px',
+          }}
+        >
+          <Box sx={{ display: 'flex', pr: '20px' }}>
+            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+              <Link href="/">Back</Link>
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', pr: 2 }}>
+            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+              <div>
+                <Link href="/task/1" onClick={() => setID('1')}>
+                  1
+                </Link>
+              </div>
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', pr: 2 }}>
+            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+              <div>
+                <Link href="/task/2" onClick={() => setID('2')}>
+                  2
+                </Link>
+              </div>
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', pr: 2 }}>
+            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+              <Link href="/task/3" onClick={() => setID('3')}>
+                3
+              </Link>
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', pr: 1 }}>
+            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+              <Link href="/task/4" onClick={() => setID('4')}>
+                4
+              </Link>
+            </Typography>
+          </Box>
         </Box>
-      </AppBar>
+      </Box>
     </MainLayout>
   );
 };
