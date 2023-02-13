@@ -71,15 +71,17 @@ export default function Task(props: any) {
   }
 
   return (
-    <MainLayout title={`task ${router.query.id}`}>
-      <Box mt={8}>
-        <Typography sx={{ my: 2 }}>
-          <Link href="/about">back-to-About</Link>
-          <div>{`task ${router.query.id}`}</div>
-          <div>{output}</div>
-        </Typography>
-      </Box>
-    </MainLayout>
+    <>
+      <MainLayout title={`task ${router.query.id}`}>
+        <Box mt={8}>
+          <Typography sx={{ my: 2 }}>
+            <Link href="/about">back-to-About</Link>
+            <div>{`task ${router.query.id}`}</div>
+            <div>{output}</div>
+          </Typography>
+        </Box>
+      </MainLayout>
+    </>
   );
 }
 
