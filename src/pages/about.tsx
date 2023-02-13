@@ -22,7 +22,7 @@ const About = (props: any) => {
         }}
       >
         <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-          <h1>ABOUT</h1>
+          {/* <h1>ABOUT</h1> */}
         </Typography>
         <Box
           sx={{
