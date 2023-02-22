@@ -21,58 +21,7 @@ const About = (props: any) => {
           pr: '20px',
         }}
       >
-        <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-          {/* <h1>ABOUT</h1> */}
-        </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            pr: '20px',
-          }}
-        >
-          <Box sx={{ display: 'flex', pr: '20px' }}>
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              <Link href="/">Back</Link>
-            </Typography>
-          </Box>
-
-          <Box sx={{ display: 'flex', pr: 2 }}>
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              <div>
-                <Link href="/task/1" onClick={() => setID('1')}>
-                  1
-                </Link>
-              </div>
-            </Typography>
-          </Box>
-
-          <Box sx={{ display: 'flex', pr: 2 }}>
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              <div>
-                <Link href="/task/2" onClick={() => setID('2')}>
-                  2
-                </Link>
-              </div>
-            </Typography>
-          </Box>
-
-          <Box sx={{ display: 'flex', pr: 2 }}>
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              <Link href="/task/3" onClick={() => setID('3')}>
-                3
-              </Link>
-            </Typography>
-          </Box>
-
-          <Box sx={{ display: 'flex', pr: 1 }}>
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              <Link href="/task/4" onClick={() => setID('4')}>
-                4
-              </Link>
-            </Typography>
-          </Box>
-        </Box>
+        <Typography sx={{ my: 2 }}>{/* <h1>ABOUT</h1> */}</Typography>
       </Box>
     </MainLayout>
   );
