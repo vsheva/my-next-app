@@ -6,4 +6,11 @@ export const theme = createTheme({
       main: '#00ff00',
     },
   },
+  components:{
+    MuiCssBaseline:{
+      styleOverrides:{
+        body:{height: '100vh'}
+      },
+    },
+  },
 });
