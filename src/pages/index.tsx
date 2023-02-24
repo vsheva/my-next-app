@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import Link from 'next/link';
 import { MainLayout } from '@/components/MainLayout';
+import { Box } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,97 +19,103 @@ export default function Home() {
       </Head>
       <MainLayout title="Home">
         <main>
-          <div >
-            <Link href="/about">About</Link>
-            <p>
-              Get started by editing&nbsp;
-              <code>src/pages/index.tsx</code>
-            </p>
-            <div>
-              <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100vw',
+              alignItems: 'center',
+              justifyContent: 'space-around',
+            }}
+          >
+            <Typography> Hello Valera</Typography>
+            {/*<Link href="/about">About</Link>*/}
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Typography>Get started by editing&nbsp;</Typography>
+              <Typography>src/pages/index.tsx</Typography>
+            </Box>
+
+            <Link
+              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                }}
               >
-                By{' '}
-                <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
-                  width={100}
-                  height={24}
-                  priority
-                />
-              </a>
-            </div>
-          </div>
+                <Typography>By</Typography>
+                <Image src="/vercel.svg" alt="Vercel Logo" width={100} height={24} priority />
+              </Box>
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
+            <Image src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
+            <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+          </Box>
 
-          <div >
-            <Image
-              src="/next.svg"
-              alt="Next.js Logo"
-              width={180}
-              height={37}
-              priority
-            />
-            <div>
-              <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-            </div>
-          </div>
-
-          <div >
-            <a
+          <Box sx={{
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+            <Link
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 >
+              <Typography>
                 Docs <span>-&gt;</span>
-              </h2>
-              <p >
-                Find in-depth information about Next.js features and&nbsp;API.
-              </p>
-            </a>
+              </Typography>
+              <p>Find in-depth information about Next.js features and&nbsp;API.</p>
+            </Link>
 
-            <a
+            <Link
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 >
+              <Typography>
                 Learn <span>-&gt;</span>
-              </h2>
-              <p >
-                Learn about Next.js in an interactive course with&nbsp;quizzes!
-              </p>
-            </a>
+              </Typography>
+              <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+            </Link>
 
-            <a
+            <Link
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 >
+              <Typography>
                 Templates <span>-&gt;</span>
-              </h2>
-              <p >
-                Discover and deploy boilerplate example Next.js&nbsp;projects.
-              </p>
-            </a>
+              </Typography>
+              <p>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
+            </Link>
 
-            <a
+            <Link
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 >
+              <Typography>
                 Deploy <span>-&gt;</span>
-              </h2>
-              <p>
-                Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.
-              </p>
-            </a>
-          </div>
+              </Typography>
+              <p>Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.</p>
+            </Link>
+          </Box>
         </main>
       </MainLayout>
     </>

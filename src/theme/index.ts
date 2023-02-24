@@ -9,7 +9,14 @@ export const theme = createTheme({
   components:{
     MuiCssBaseline:{
       styleOverrides:{
-        body:{height: '100vh'}
+        body:{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexDirection: 'column',
+          paddingTop:"70px",
+          height: '100vh'
+        }
       },
     },
   },
