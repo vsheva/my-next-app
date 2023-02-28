@@ -4,6 +4,8 @@ import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
+import LinkNavigation from './LinkNavigation';
+import ButtonNavigation from './ButtonNavigation';
 
 export function MainLayout({ children, title = 'home' }: any) {
   return (
@@ -21,9 +23,11 @@ export function MainLayout({ children, title = 'home' }: any) {
               // height: 5,
             }}
           >
-            <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
-              Next
-            </Typography>
+            <LinkNavigation href="/">
+              <Typography textTransform="uppercase" variant="h6" sx={{ my: 2 }}>
+                Next
+              </Typography>
+            </LinkNavigation>
 
             <Box
               sx={{
@@ -34,17 +38,14 @@ export function MainLayout({ children, title = 'home' }: any) {
                 textTransform: 'uppercase',
               }}
             >
-              <Button sx={{ color: '#fff' }}>Hi</Button>
-
               <Box
                 sx={{
                   display: 'flex',
                   pr: '20px',
                 }}
               >
-                <Link href="/about">
-                  <Button sx={{ color: '#fff' }}>
-                    {' '}
+                <LinkNavigation href="/about">
+                  <ButtonNavigation>
                     <Typography
                       textTransform="uppercase"
                       variant="h6"
@@ -52,36 +53,28 @@ export function MainLayout({ children, title = 'home' }: any) {
                     >
                       About
                     </Typography>
-                  </Button>
-                </Link>
+                  </ButtonNavigation>
+                </LinkNavigation>
               </Box>
               <Box
                 sx={{
                   display: 'flex',
                   pr: '20px',
                 }}
-              >
-                <Link href="/">
-                  <Button sx={{ color: '#fff' }}>
-                    <Typography textTransform="uppercase" variant="h6">
-                      Home
-                    </Typography>
-                  </Button>
-                </Link>
-              </Box>
+              ></Box>
               <Box
                 sx={{
                   display: 'flex',
                   pr: '20px',
                 }}
               >
-                <Link href="/task/1">
-                  <Button sx={{ color: '#fff' }}>
+                <LinkNavigation href="/task/1">
+                  <ButtonNavigation>
                     <Typography textTransform="uppercase" variant="h6">
                       1
                     </Typography>
-                  </Button>
-                </Link>
+                  </ButtonNavigation>
+                </LinkNavigation>
               </Box>
               <Box
                 sx={{
@@ -89,13 +82,13 @@ export function MainLayout({ children, title = 'home' }: any) {
                   pr: '20px',
                 }}
               >
-                <Link href="/task/2">
-                  <Button sx={{ color: '#fff' }}>
+                <LinkNavigation href="/task/2">
+                  <ButtonNavigation>
                     <Typography textTransform="uppercase" variant="h6">
                       2
                     </Typography>
-                  </Button>
-                </Link>
+                  </ButtonNavigation>
+                </LinkNavigation>
               </Box>
               <Box
                 sx={{
@@ -103,13 +96,13 @@ export function MainLayout({ children, title = 'home' }: any) {
                   pr: '20px',
                 }}
               >
-                <Link href="/task/3">
-                  <Button sx={{ color: '#fff' }}>
+                <LinkNavigation href="/task/3">
+                  <ButtonNavigation>
                     <Typography textTransform="uppercase" variant="h6">
                       3
                     </Typography>
-                  </Button>
-                </Link>
+                  </ButtonNavigation>
+                </LinkNavigation>
               </Box>
               <Box
                 sx={{
@@ -117,13 +110,13 @@ export function MainLayout({ children, title = 'home' }: any) {
                   pr: '20px',
                 }}
               >
-                <Link href="/task/4">
-                  <Button sx={{ color: '#fff' }}>
+                <LinkNavigation href="/task/4">
+                  <ButtonNavigation>
                     <Typography textTransform="uppercase" variant="h6">
                       4
                     </Typography>
-                  </Button>
-                </Link>
+                  </ButtonNavigation>
+                </LinkNavigation>
               </Box>
             </Box>
           </Box>

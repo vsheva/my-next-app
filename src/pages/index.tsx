@@ -5,6 +5,18 @@ import Link from 'next/link';
 import { MainLayout } from '@/components/MainLayout';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import React from 'react';
+
+import LinkNavigation from '@/components/LinkNavigation';
+
+//import {Title} from '../components/Title';
+
+import { styled as muiStyled } from '@mui/system';
+import styled from '@emotion/styled';
+
+const Title = styled.h1<any>`
+  color: red;
+`;
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +30,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout title="Home">
-        <main>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '85vw',
+            height: '85vh',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
           <Box
             sx={{
               display: 'flex',
@@ -27,8 +48,8 @@ export default function Home() {
               justifyContent: 'space-around',
             }}
           >
-            <Typography> Hello Valera</Typography>
-            {/*<Link href="/about">About</Link>*/}
+            <Title> Hello Valera</Title>
+
             <Box
               sx={{
                 display: 'flex',
@@ -39,7 +60,7 @@ export default function Home() {
               <Typography>src/pages/index.tsx</Typography>
             </Box>
 
-            <Link
+            <LinkNavigation
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -52,27 +73,29 @@ export default function Home() {
                 <Typography>By</Typography>
                 <Image src="/vercel.svg" alt="Vercel Logo" width={100} height={24} priority />
               </Box>
-            </Link>
+            </LinkNavigation>
           </Box>
           <Box
             sx={{
               display: 'flex',
               width: '100%',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <Image src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
             <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
           </Box>
 
-          <Box sx={{
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-            <Link
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <LinkNavigation
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -81,9 +104,9 @@ export default function Home() {
                 Docs <span>-&gt;</span>
               </Typography>
               <p>Find in-depth information about Next.js features and&nbsp;API.</p>
-            </Link>
+            </LinkNavigation>
 
-            <Link
+            <LinkNavigation
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -92,9 +115,9 @@ export default function Home() {
                 Learn <span>-&gt;</span>
               </Typography>
               <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-            </Link>
+            </LinkNavigation>
 
-            <Link
+            <LinkNavigation
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -103,9 +126,9 @@ export default function Home() {
                 Templates <span>-&gt;</span>
               </Typography>
               <p>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
-            </Link>
+            </LinkNavigation>
 
-            <Link
+            <LinkNavigation
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -114,9 +137,9 @@ export default function Home() {
                 Deploy <span>-&gt;</span>
               </Typography>
               <p>Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.</p>
-            </Link>
+            </LinkNavigation>
           </Box>
-        </main>
+        </Box>
       </MainLayout>
     </>
   );
