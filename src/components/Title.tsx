@@ -6,5 +6,3 @@ import { Box } from '@mui/material';
 export const Title = styled.h1<any>`
   color: red;
 `;
-
-export const  
