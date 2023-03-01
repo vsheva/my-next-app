@@ -88,6 +88,7 @@ export function MainLayout({ children, title = 'home' }: any) {
                   display: 'flex',
                   pr: '20px',
                 }}
+
               >
                 <Link href="/task/2">
                   <Button sx={{ color: '#fff' }}>
