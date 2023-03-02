@@ -15,10 +15,17 @@
 //   );
 // }
 
-import { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 // import createEmotionServer from '@emotion/server/types/create-instance';
 import createEmotionCache from '@/theme/createEmotionCache';
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
+
 import createEmotionServer from '@emotion/server/create-instance';
 
 // interface MyDocumentProps {

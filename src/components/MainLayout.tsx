@@ -47,7 +47,6 @@ export function MainLayout({ children, title = 'home' }: any) {
   ];
 
   const OutputNavigation = nameButton.map(button => (
-    // eslint-disable-next-line react/jsx-key
     <Boxic key={button.title}>
       <LinkNavigation href={button.href}>
         <ButtonNavigation>
