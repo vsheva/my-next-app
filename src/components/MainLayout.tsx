@@ -50,6 +50,7 @@ export function MainLayout({ children, title = 'home' }: any) {
                       variant="h6"
                       // sx={{ my: 1 }}
                     >
+                      
                       About
                     </Typography>
                   </Button>
