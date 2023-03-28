@@ -38,6 +38,8 @@ const HeadTapo = styled(Tapo)`
 `;
 
 export function MainLayout({ children, title = 'home' }: any) {
+  const name = 'Vally';
+
   const nameButton = [
     { href: '/about', title: 'About' },
     { href: '/task/1', title: '1' },
@@ -64,7 +66,7 @@ export function MainLayout({ children, title = 'home' }: any) {
       <nav>
         <AppBar component="nav">
           <BigBoxic>
-            <LinkNavigation href="/">
+            <LinkNavigation href={{ pathname: '/', query: { name: 'Vally' } }}>
               <HeadTapo variant="h5">Next</HeadTapo>
             </LinkNavigation>
 

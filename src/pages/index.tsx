@@ -9,6 +9,8 @@ import React from 'react';
 
 import LinkNavigation from '@/components/LinkNavigation';
 
+import { useRouter } from 'next/router';
+
 //import {Title} from '../components/Title';
 
 import { styled as muiStyled } from '@mui/system';
@@ -21,6 +23,10 @@ const Title = styled.h1<any>`
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const router = useRouter();
+  const name = router.query;
+  console.log('name', name);
+
   return (
     <>
       <Head>
@@ -48,8 +54,7 @@ export default function Home() {
               justifyContent: 'space-around',
             }}
           >
-            <Title> Hello Valera</Title>
-
+            <Title> Hello {name.name}</Title>
             <Box
               sx={{
                 display: 'flex',
