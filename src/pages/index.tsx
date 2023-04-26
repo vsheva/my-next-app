@@ -23,8 +23,9 @@ const Title = styled.h1<any>`
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const router = useRouter();
-  const name = router.query;
+
+  const router = useRouter(); //
+  const name = router.query; //
   console.log('name', name);
 
   return (
